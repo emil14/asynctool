@@ -1,4 +1,4 @@
-import { work, map } from './index.js';
+import { work, map } from './src/index.js';
 
 // this should return promise and resolve it in the main thread later
 console.log(
