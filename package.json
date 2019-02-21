@@ -1,0 +1,29 @@
+{
+  "name": "asynctools",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/emil14/asynctools.git"
+  },
+  "keywords": [
+    "Async",
+    "pure",
+    "functional",
+    "multithread",
+    "utils",
+    "library",
+    "for",
+    "JavaScript"
+  ],
+  "author": "Emil Valeev <emil.musician@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emil14/asynctools/issues"
+  },
+  "homepage": "https://github.com/emil14/asynctools#readme"
+}
