@@ -7,7 +7,7 @@ export function work(promises) {
   });
 }
 
-export function map(promises) {
+export function map(data, handler) {
   const promises = data.map(async (...args) => handler(args));
   return Promise.all(promises);
 }
