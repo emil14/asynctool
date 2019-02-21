@@ -1,8 +1,13 @@
 const worker = new Worker('worker.js');
 
-export function work(promises) {
+export function work(promises, shouldTransfer) {
   return new Promise(resolve => {
-    worker.postMessage(promises);
+    if (!shouldTransfer) {
+      worker.postMessage(promises);
+    } else {
+      const arrayBuffer = Uint16Array.from(promises)
+      worker.postMessage(arrayBuffer, [arrayBuffer]);
+    }
     worker.onmessage(e => resolve(e.data));
   });
 }
