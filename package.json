@@ -1,7 +1,7 @@
 {
   "name": "asynctool",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.2",
+  "description": "Parallel your code with Web-Workers and Promises",
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,14 +11,18 @@
     "url": "git+ssh://git@github.com/emil14/asynctools.git"
   },
   "keywords": [
-    "Async",
+    "async",
     "pure",
     "functional",
     "multithread",
     "utils",
     "library",
     "for",
-    "JavaScript"
+    "JavaScript",
+    "on",
+    "Promises",
+    "and",
+    "Workers"
   ],
   "author": "Emil Valeev <emil.musician@gmail.com>",
   "license": "MIT",
