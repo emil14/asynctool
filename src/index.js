@@ -13,7 +13,7 @@ export function memo(wrapped) {
 }
 
 export function lazy(wrapped) {
-  return (...args) => wrapped(args)
+  return (...args) => wrapped(args);
 }
 
 export function map(iterable, mapper) {
