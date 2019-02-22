@@ -1,13 +1,8 @@
 const worker = new Worker('worker.js');
 
-export function work(promises, shouldTransfer) {
+export function work(promises) {
   return new Promise(resolve => {
-    if (!shouldTransfer) {
-      worker.postMessage(promises);
-    } else {
-      const arrayBuffer = Uint16Array.from(promises)
-      worker.postMessage(arrayBuffer, [arrayBuffer]);
-    }
+    worker.postMessage(promises);
     worker.onmessage(e => resolve(e.data));
   });
 }
@@ -18,7 +13,7 @@ export function memo(wrapped) {
 }
 
 export function lazy(wrapped) {
-  return async (...args) => wrapped(args)
+  return (...args) => wrapped(args)
 }
 
 export function map(iterable, mapper) {
